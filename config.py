@@ -5,8 +5,11 @@ __github__ = 'https://github.com/bit4woo'
 
 
 #第一步，定义种子（seed），密码的基本组成部分，必须是字典类型
-seed_1= ["7632465","15062120073","weiliang","wangchao","19861225","19910826","76324650","1986","1991","2009","2010","2011","2012","2022"]
-seed_2 = ["7632465","15062120073","weiliang","wangchao","19861225","19910826","76324650","1986","1991","2009","2010","2011","2012","2022"]
+#seed_1= ["7632465","15062120073","weiliang","wangchao","19861225","19910826","76324650","1986","1991","2009","2010","2011","2012","2022"]
+#seed_2 = ["7632465","15062120073","weiliang","wangchao","19861225","19910826","76324650","1986","1991","2009","2010","2011","2012","2022"]
+seed_1= ["weiliang","wangchao"]
+seed_2 = ["7632465","15062120073","19861225","19910826","76324650"]
+seed_3 = ["?a","??a"]
 email_end = ["@qq.com","@gmail.com","@163.com"]
 special_letter = ["@","*","@","*"]
 keyboard_walk = open('./seed/4_keyboard_walk.txt').readlines()
@@ -18,7 +21,8 @@ common_english_name = open('./seed/english_name.txt').readlines()
 #第二步，定义密码的组成规则，这里用到的seed字段，都必须在第一步中定义好，而且是字典类型
 #rule_list = ["domain+special_letter+year","domain+special_letter+keyboard_walk","domain+special_letter+common_number","domain+year","topic+special_letter+year","topic+special_letter+keyboard_walk","topic+special_letter+common_number","topic+year"]
 #rule_list = ["domain+email_end"]
-rule_list = ["domain+year+email_end"]
+rule_list = ["seed_1+seed_2","seed_2+seed_1"]
+#rule_list = ["domain+year+email_end"]
 #rule_list = ["domain+year","domain+year+special_letter","domain+year+special_letter+special_letter","special_letter+domain+year","special_letter+special_letter+domain+year","special_letter+domain+year+special_letter","special_letter+special_letter+domain+year+special_letter+special_letter","domain+special_letter+year","domain+special_letter+special_letter+year","special_letter+domain+special_letter+year","domain+special_letter+year+special_letter"]
 keep_in_order = True #以上的规则，是否保持原顺序，如果为False 将对每个规则中的seed进行排列组合后生产密码。
 
