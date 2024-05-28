@@ -3,10 +3,10 @@
 __author__ = 'bit4woo'
 __github__ = 'https://github.com/bit4woo'
 
-from tkinter import *
+#from tkinter import *
 from lib.common import logger,strip_list
 from lib.paras import paras
-import tkinter.filedialog
+#import tkinter.filedialog
 import passmaker
 import os
 import sys
